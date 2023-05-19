@@ -19,30 +19,6 @@ const startServer = async (port, uri) => {
   }
 };
 app.use(express.json());
-// app.post("/", async (req, res, next) => {
-//   const { userData } = req.body;
-//   const token = jwt.sign(userData, process.env.JWT_SECRET, {
-//     expiresIn: "30d",
-//   });
-//   try {
-//     const user = await User.create(userData);
-//     res.status(StatusCodes.CREATED).json({ user, token });
-//   } catch (error) {
-//     throw new ApiError(error);
-//   }
-// });
-// app.get("/", auth, async (req, res, next) => {
-//   try {
-//     const { name, age } = (user = req.user);
-//     const users = await User.find();
-//     res.status(200).json({ users, userData: user });
-//   } catch (error) {
-//     throw new ApiError(error.message);
-//   }
-// });
-// app.get("/error", (req, res, next) => {
-//   throw new unAuthorizedError("un Authed MSG");
-// });
 // Routes
 app.use(router);
 // Not Found
